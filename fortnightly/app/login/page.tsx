@@ -1,3 +1,12 @@
-export default function Login() {
-  return <h1>Login pathS</h1>;
+
+async function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => reject("ok"), 2000);
+  });
+}
+
+export default async function Login() {
+  const data = await getData();
+
+  return <h1>niceeeee</h1>;
 }
